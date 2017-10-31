@@ -1,10 +1,308 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>基本地图展示</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="stylesheet" href="static/css/iconfont.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.4.1&key=fea7b2c088e570863630c692de4a5ae8"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <style>
+        .dash {
+            background-image: linear-gradient(33deg, #556575, #34454F);
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .flex-container {
+            display: -webkit-flex; /* Safari */
+            display: flex;
+        }
+
+        .flex-item {
+            -webkit-flex-grow: 1; /* Safari */
+            flex-grow: 1;
+            color: #FBF7FB;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            width: 33.3%;
+        }
+
+        .second-content {
+            overflow: hidden;
+        }
+
+        .tire-pressure {
+
+        }
+
+        .tire-pressure .title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .tire-pressure .content {
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            -webkit-flex-wrap: wrap; /* Safari */
+            flex-wrap: wrap;
+            margin: .5rem 0;
+        }
+
+        .tire-item {
+            -webkit-flex-grow: 1; /* Safari */
+            flex-grow: 1;
+            width: 50%;
+
+        }
+
+        .tire-item .number {
+            font-size: 3rem;
+            float: left;
+        }
+
+         .tire-item .number.error {
+            color: #F5554A;
+        }
+
+         .tire-item .unit {
+            font-size: .8rem;
+            float: left;
+            color: #929598;
+            margin-left: .2rem;
+        }
+
+        .tire-item .desc {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: .8rem;
+        }
+
+        .temprature {
+            padding: 1rem 2.5rem;
+            border-right: 1px solid #FBF7FB;
+        }
+
+        .temprature  .content {
+            margin: .5rem 0;
+        }
+
+        .temprature  .title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .temprature .number {
+            font-size: 3rem;
+            float: left;
+            width: 33.3%;
+            text-align: center;
+        }
+
+        .temprature .unit {
+            font-size: .8rem;
+            color: #929598;
+            margin-left: .1rem;
+        }
+        .temprature .temp-bottom {
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .temprature .bottom-img {
+            width: 33.3%;
+            float: left;
+        }
+
+        .temprature .bottom-img img {
+            width: 3rem;
+        }
+
+        .jia {
+            font-size: 1.6rem;
+            color: #34454F;
+        }
+
+        .jian {
+            font-size: 1.6rem;
+            color: #34454F;
+        }
+
+        .control {
+            width: 3rem;
+            height: 3rem;
+            text-align: center;
+            line-height: 3.1rem;
+            border-radius: 3rem;
+            background-color: #FBF7FB;
+        }
+
+        .control-box {
+            float: left;
+            width: 33.3%;
+        }
+
+        .vehicle .title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .vehicle .content {
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            -webkit-flex-wrap: wrap; /* Safari */
+            flex-wrap: wrap;
+            margin: .5rem 0;
+        }
+
+        .vehicle .veh-item {
+            -webkit-flex-grow: 1; /* Safari */
+            flex-grow: 1;
+            font-size: 2rem;
+        }
+
+        .status-bar {
+            background-image: linear-gradient(33deg, #556575, #34454F);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: .5rem 0;
+        }
+
+        .status-bar .item {
+            text-align: center;
+            color: #FBF7FB;
+            float: right;
+            padding: 0 1rem;
+        }
+    </style>
 </head>
 <body>
-hahahahaha
+<div class="status-bar">
+    <div class="item">2017/10/31 14:12:25</div>
+    <div class="item">17℃</div>
+    <div class="item">晴</div>
+</div>
+<div class="dash">
+    <div class="flex-container">
+<!--        <div class="flex-item vehicle">
+            <div class="title">INSTANT HMI</div>
+            <div class="content">
+                &lt;!&ndash;<iframe allowtransparency="true" frameborder="0" width="180" height="36" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=&f=ffffff&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=180&h=36&align=left"></iframe>
+                <iframe style="padding: 1rem;" height="36" width="260" src="http://www.ximalaya.com/swf/sound/red.swf?id=12896912&auto=true" frameborder=0 allowfullscreen></iframe>&ndash;&gt;
+                <div class="veh-item">17℃</div>
+                <div class="veh-item">晴</div>
+            </div>
+        </div>-->
+        <div class="flex-item temprature">
+            <div class="title">TEMPRATURE</div>
+            <div class="content">
+                <div style="overflow: hidden; margin-top: 1.5rem;">
+                    <div class="control-box">
+                        <div class="control">
+                            <i class="iconfont icon-jianhao jian"></i>
+                        </div>
+                    </div>
+                    <span class="number">27<span class="unit">℃</span></span>
+                    <div class="control-box">
+                        <div class="control" style="float: right;">
+                            <i class="iconfont icon-jiahao1 jia"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="temp-bottom">
+                    <div class="bottom-img">
+                        <img src="static/images/freezer.png"/>
+                    </div>
+                    <div class="bottom-img" style="text-align: center;">
+                        <img src="static/images/car.png"/>
+                    </div>
+                    <div class="bottom-img" style="text-align: right;">
+                        <img src="static/images/windscreen-3.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-item tire-pressure">
+            <div class="title">TIRE PRESSURE</div>
+            <div class="content">
+                <div class="tire-item">
+                    <div class="second-content">
+                        <div class="number">39</div>
+                        <div class="unit">PSI</div>
+                    </div>
+                    <div class="desc">FRONT LEFT</div>
+                </div>
+                <div class="tire-item">
+                    <div class="second-content">
+                        <div class="number error">21</div>
+                        <div class="unit">PSI</div>
+                    </div>
+                    <div class="desc">FRONT RIGHT</div>
+                </div>
+                <div class="tire-item">
+                    <div class="second-content">
+                        <div class="number">39</div>
+                        <div class="unit">PSI</div>
+                    </div>
+                    <div class="desc">BACK LEFT</div>
+                </div>
+                <div class="tire-item">
+                    <div class="second-content">
+                        <div class="number">38</div>
+                        <div class="unit">PSI</div>
+                    </div>
+                    <div class="desc">BACK RIGHT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="container">
+</div>
+
+<script>
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        zoom:14,
+        center: [118.790676,31.893883]
+    });
+    map.setMapStyle('amap://styles/macaron');
+
+    //实时路况图层
+    var trafficLayer = new AMap.TileLayer.Traffic({
+        zIndex: 10
+    });
+    trafficLayer.setMap(map);
+
+    AMap.service('AMap.Weather', function() {
+        var weather = new AMap.Weather();
+        //查询实时天气信息, 查询的城市到行政级别的城市，如朝阳区、杭州市
+        weather.getLive('南京', function(err, data) {
+            if (!err) {
+                var str = [];
+                str.push('<div style="color: #3366FF;">实时天气' + '</div>');
+                str.push('<div>城市/区：' + data.city + '</div>');
+                str.push('<div>天气：' + data.weather + '</div>');
+                str.push('<div>温度：' + data.temperature + '℃</div>');
+                str.push('<div>风向：' + data.windDirection + '</div>');
+                str.push('<div>风力：' + data.windPower + ' 级</div>');
+                str.push('<div>空气湿度：' + data.humidity + '</div>');
+                str.push('<div>发布时间：' + data.reportTime + '</div>');
+                console.log(str);
+            }
+        });
+    });
+</script>
 </body>
 </html>
