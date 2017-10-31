@@ -2,113 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6919a2-787f-4698-8eff-50f3b80b13ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/iconfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/iconfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_actionSheet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_article.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_button.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_calendar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_cell.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_city.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_datetime.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_dialog.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_msg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_noti.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_photo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_picker.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_progress.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_ptr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_search_bar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_select.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_swiper.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_tab.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_toast.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/icon_nav_up.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/pic_160.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/pic_article.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/present.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/swiper-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/swiper-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/swiper-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/swiper-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/images/vcode.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/air-conditioner-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/air-conditioner.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/car.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/freezer-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/freezer-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/freezer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/windscreen-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/windscreen-3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/windscreen-4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/windscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/iconfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/jquery-weui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/jquery-weui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/action-sheet.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/article.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/badge.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/calendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/cell.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/city-picker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/cols.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/contacts.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/css/demos.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/datetime-picker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/dialog.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/flex.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/gallery.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/gesture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/grid.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/infinite-with-navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/infinite.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/loadmore.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/msg.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/noti.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/panel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/photo-browser.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/picker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/popup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/preview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/progress.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/ptr-with-infinite.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/ptr.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/pull-to-refresh-with-navbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/searchbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/select-test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/select.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/slider.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/swiper.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/tabbar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/toast.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/toptip.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/demos/uploader.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/city-picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/city-picker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-weui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-weui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/swiper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/swiper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/fastclick.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/jquery-2.1.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/weui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/weui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/lib/zepto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/tabbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,8 +17,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="185" column="28" lean-forward="false" selection-start-line="185" selection-start-column="28" selection-end-line="185" selection-end-column="28" />
+            <state relative-caret-position="114">
+              <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -397,13 +290,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18887262" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30441642" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30441642" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -582,8 +475,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="185" column="28" lean-forward="false" selection-start-line="185" selection-start-column="28" selection-end-line="185" selection-end-column="28" />
+        <state relative-caret-position="114">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

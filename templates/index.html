@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <title>基本地图展示</title>
+    <title>Instant HMI</title>
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
     <link rel="stylesheet" href="static/css/iconfont.css">
     <link rel="stylesheet" href="static/css/index.css">
@@ -189,9 +189,11 @@
 </head>
 <body>
 <div class="status-bar">
+
     <div class="item">2017/10/31 14:12:25</div>
     <div class="item">17℃</div>
     <div class="item">晴</div>
+    <div class="item">南京市</div>
 </div>
 <div class="dash">
     <div class="flex-container">
@@ -278,6 +280,15 @@
         center: [118.790676,31.893883]
     });
     map.setMapStyle('amap://styles/macaron');
+
+   var marker = new AMap.Marker({
+        position: map.getCenter(),
+        draggable: true,
+        cursor: 'move'
+    });
+    marker.setMap(map);
+    // 设置点标记的动画效果，此处为弹跳效果
+    marker.setAnimation('AMAP_ANIMATION_BOUNCE');
 
     //实时路况图层
     var trafficLayer = new AMap.TileLayer.Traffic({
