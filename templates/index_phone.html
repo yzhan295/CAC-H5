@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Instant Dock</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+		<link rel="stylesheet" href="static/mui/css/mui.min.css">
+		<script src="static/mui/js/mui.min.js"></script>
+        <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+        <script src="http://webapi.amap.com/maps?v=1.4.1&key=fea7b2c088e570863630c692de4a5ae8"></script>
+        <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<style>
+			html,body {
+				background-color: #efeff4;
+			}
+
+			.mui-bar {
+			    background-color: #2C2C43;
+			    color: #FBF7FB;
+			    height: 22px;
+			}
+
+            .mui-bar .mui-title {
+                color: #FBF7FB;
+                line-height: 22px;
+            }
+
+            a {
+                color: #FBF7FB;
+            }
+
+            .status-bar {
+                position: relative;
+                right: 0;
+                top: 0;
+                z-index: 1000;
+                width: 100%;
+                padding: 0 0;
+            }
+
+            .status-bar .item {
+                text-align: center;
+                color: #FBF7FB;
+                float: right;
+                padding: 0 1rem;
+                font-size: 14px;
+            }
+
+            .dash {
+                background-image: linear-gradient(33deg, #556575, #34454F);
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 1000;
+                width: 100%;
+                padding: 10px;
+            }
+
+            .dash img {
+                width: 35px;
+                margin: 5px;
+            }
+
+            .dash .title {
+                text-align: center;
+                padding: 0 0 10px 0;
+                font-size: 14px;
+                font-weight: bold;
+                color: #FBF7FB;
+            }
+
+            .number {
+                font-size: 24px;
+                color: #FBF7FB;
+                line-height: 40px;
+            }
+
+            .unit {
+                font-size: 12px;
+                color: #929598;
+            }
+
+            .radius-btn-icon {
+                margin: 3px;
+                width: 40px;
+                height: 40px;
+                display: inline-block;
+                text-align: center;
+                background-color: #f5bc21;
+                border-radius: 25px;
+                background-clip: padding-box;
+                color: #FBF7FB;
+            }
+
+            .radius-btn-icon:active {
+                color: #FBF7FB;
+                background-color: #f0ad4e;
+            }
+
+            .mui-icon {
+                margin-top: 7px;
+                font-weight: bold;
+            }
+
+            .second-content {
+                overflow: hidden;
+            }
+
+            .tire-item .number {
+                font-size: 24px;
+                float: left;
+                line-height: 24px;
+            }
+
+            .tire-item .unit {
+                font-size: 12px;
+                float: left;
+                color: #929598;
+                margin-left: 5px;
+            }
+
+            .tire-item .desc {
+                font-weight: bold;
+                font-size: 12px;
+                color: #FBF7FB;
+                text-align: left;
+            }
+
+            .tire-item .number.error {
+                color: #F5554A;
+            }
+
+            .tire-item .tire-item-box {
+                overflow:hidden;
+                display:inline-block; *display:inline; zoom:1;
+            }
+		</style>
+
+	</head>
+	<body>
+
+		<div class="mui-content">
+			<header class="mui-bar mui-bar-nav">
+
+				<h1 class="mui-title" style="right: 10px;">
+                    <div class="status-bar">
+                        <div class="item">14:12:25</div>
+                        <div class="item">17℃</div>
+                        <div class="item">晴</div>
+                        <div class="item">南京市</div>
+                    </div>
+                </h1>
+			</header>
+            <!--<img style="-webkit-user-select: none;position: absolute;top: 44px;right: 0;z-index: 100;" src="http://192.168.1.101:8081/">-->
+			<div class="mui-content" id="container">
+				<!--<a href="#modal" class="mui-btn mui-btn-primary mui-btn-block">Click</a>-->
+			</div>
+
+            <div class="dash">
+                <div class="mui-row">
+                    <div class="mui-col-sm-6 mui-col-xs-6" style="text-align: center;">
+                        <div class="title">TEMPRATURE</div>
+                        <div class="mui-row">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthindown"></span></div>
+                            </div>
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <span class="number">27<span class="unit">℃</span></span>
+                            </div>
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthinup"></span></div>
+                            </div>
+                        </div>
+                        <div class="mui-row" style="margin: 10px 0 0 0;">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <img src="static/images/freezer.png">
+                            </div>
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <img src="static/images/car.png">
+                            </div>
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <img src="static/images/windscreen-3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mui-col-sm-6 mui-col-xs-6" style="border-left: 1px solid #FBF7FB;">
+                        <div class="title" style="margin-left: 10px;">TIRE PRESSURE</div>
+                        <div class="mui-row" style="text-align: center; margin-left: 10px;">
+                            <div class="mui-col-sm-6 mui-col-xs-6 tire-item" style="margin-bottom: 10px;">
+                                <div class="tire-item-box">
+                                    <div class="second-content">
+                                        <div class="number">39</div>
+                                        <div class="unit">PSI</div>
+                                    </div>
+                                    <div class="desc">FRONT LEFT</div>
+                                </div>
+                            </div>
+                            <div class="mui-col-sm-6 mui-col-xs-6 tire-item"  style="margin-bottom: 10px;">
+                                <div class="tire-item-box">
+                                    <div class="second-content">
+                                        <div class="number error">21</div>
+                                        <div class="unit">PSI</div>
+                                    </div>
+                                    <div class="desc">FRONT RIGHT</div>
+                                </div>
+                            </div>
+                            <div class="mui-col-sm-6 mui-col-xs-6 tire-item">
+                                <div class="tire-item-box">
+                                    <div class="second-content">
+                                        <div class="number">39</div>
+                                        <div class="unit">PSI</div>
+                                    </div>
+                                    <div class="desc">BACK LEFT&nbsp</div>
+                                </div>
+                            </div>
+                            <div class="mui-col-sm-6 mui-col-xs-6 tire-item">
+                                <div class="tire-item-box">
+                                    <div class="second-content">
+                                        <div class="number">38</div>
+                                        <div class="unit">PSI</div>
+                                    </div>
+                                    <div class="desc">BACK RIGHT&nbsp</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+			<div id="modal" class="mui-modal">
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-icon-close mui-pull-right" href="#modal"></a>
+					<h1 class="mui-title">Modal</h1>
+				</header>
+				<div class="mui-content" style="height: 100%;">
+					<p class="mui-content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+    <script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+
+			var map = new AMap.Map('container', {
+                resizeEnable: true,
+                zoom:14,
+                center: [118.790676,31.893883]
+            });
+            map.setMapStyle('amap://styles/macaron');
+
+           var marker = new AMap.Marker({
+                position: map.getCenter(),
+                draggable: true,
+                cursor: 'move'
+            });
+            marker.setMap(map);
+            // 设置点标记的动画效果，此处为弹跳效果
+            marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+
+            //实时路况图层
+            var trafficLayer = new AMap.TileLayer.Traffic({
+                zIndex: 10
+            });
+            trafficLayer.setMap(map);
+
+            AMap.service('AMap.Weather', function() {
+                var weather = new AMap.Weather();
+                //查询实时天气信息, 查询的城市到行政级别的城市，如朝阳区、杭州市
+                weather.getLive('南京', function(err, data) {
+                    if (!err) {
+                        var str = [];
+                        str.push('<div style="color: #3366FF;">实时天气' + '</div>');
+                        str.push('<div>城市/区：' + data.city + '</div>');
+                        str.push('<div>天气：' + data.weather + '</div>');
+                        str.push('<div>温度：' + data.temperature + '℃</div>');
+                        str.push('<div>风向：' + data.windDirection + '</div>');
+                        str.push('<div>风力：' + data.windPower + ' 级</div>');
+                        str.push('<div>空气湿度：' + data.humidity + '</div>');
+                        str.push('<div>发布时间：' + data.reportTime + '</div>');
+                        console.log(str);
+                    }
+                });
+            });
+		</script>
+</html>
