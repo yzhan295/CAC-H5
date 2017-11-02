@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6919a2-787f-4698-8eff-50f3b80b13ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/fonts/mui-icons-extra.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/fonts/mui.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_can_bus.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/feedback.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/icons-extra.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.dtpicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.imageviewer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.indexedlist.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.listpicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.picker.all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.picker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.picker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/css/mui.poppicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/95516.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/ad.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/arttmpl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/beecloud.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/city.data-3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/city.data.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/feedback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.dtpicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.imageViewer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.indexedlist.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.lazyload.img.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.lazyload.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.listpicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.locker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.picker.all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.picker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.picker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.poppicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.previewimage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.pullToRefresh.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.pullToRefresh.material.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.view.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/mui.zoom.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/update.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mui/js/webviewGroup.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index_phone.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index_phone.html" afterPath="$PROJECT_DIR$/templates/index_phone.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,8 +29,8 @@
       <file leaf-file-name="index_phone.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index_phone.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="100" column="41" lean-forward="false" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+            <state relative-caret-position="175">
+              <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -323,7 +278,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17062314" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2840909" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2840909" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -543,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index_phone.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="100" column="41" lean-forward="false" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
+        <state relative-caret-position="175">
+          <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
