@@ -12,9 +12,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/index_phone')
+@app.route('/index_pad')
 def index_phone():
-    return render_template('index_phone.html')
+    return render_template('index_pad.html')
 
 
 @app.route('/query_vehicle_data')
