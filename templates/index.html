@@ -12,7 +12,7 @@
 		<script src="static/mui/js/mui.min.js"></script>
         <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
         <script src="http://webapi.amap.com/maps?v=1.4.1&key=fea7b2c088e570863630c692de4a5ae8"></script>
-        <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+        <!--<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>-->
 		<style>
 			html,body {
 				background-color: #efeff4;
@@ -242,50 +242,73 @@
 			</div>
 		</div>
 	</body>
+    <script src="static/lib/jquery-2.1.4.js"></script>
     <script>
 			mui.init({
 				swipeBack:true //启用右滑关闭功能
 			});
 
-			var map = new AMap.Map('container', {
-                resizeEnable: true,
-                zoom:14,
-                center: [118.790676,31.893883]
+			$(document).ready(function(){
+                initAutoMap();
+                query_vehicle_data();
             });
-            map.setMapStyle('amap://styles/macaron');
 
-           var marker = new AMap.Marker({
-                position: map.getCenter(),
-                draggable: true,
-                cursor: 'move'
-            });
-            marker.setMap(map);
-            // 设置点标记的动画效果，此处为弹跳效果
-            marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+            function query_vehicle_data() {
+                $.ajax({
+                    url: "query_vehicle_data",
+                    type : "GET",
+                    dataType: "json",
+                    contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+                    data: {
+                    },
+                    success: function(data) {
+                        console.log(data);
 
-            //实时路况图层
-            var trafficLayer = new AMap.TileLayer.Traffic({
-                zIndex: 10
-            });
-            trafficLayer.setMap(map);
-
-            AMap.service('AMap.Weather', function() {
-                var weather = new AMap.Weather();
-                //查询实时天气信息, 查询的城市到行政级别的城市，如朝阳区、杭州市
-                weather.getLive('南京', function(err, data) {
-                    if (!err) {
-                        var str = [];
-                        str.push('<div style="color: #3366FF;">实时天气' + '</div>');
-                        str.push('<div>城市/区：' + data.city + '</div>');
-                        str.push('<div>天气：' + data.weather + '</div>');
-                        str.push('<div>温度：' + data.temperature + '℃</div>');
-                        str.push('<div>风向：' + data.windDirection + '</div>');
-                        str.push('<div>风力：' + data.windPower + ' 级</div>');
-                        str.push('<div>空气湿度：' + data.humidity + '</div>');
-                        str.push('<div>发布时间：' + data.reportTime + '</div>');
-                        console.log(str);
                     }
                 });
-            });
+            }
+
+			function initAutoMap() {
+			    var map = new AMap.Map('container', {
+                    resizeEnable: true,
+                    zoom:14,
+                    center: [118.790676,31.893883]
+                });
+                map.setMapStyle('amap://styles/macaron');
+
+                var marker = new AMap.Marker({
+                    position: map.getCenter(),
+                    draggable: true,
+                    cursor: 'move'
+                });
+                marker.setMap(map);
+                // 设置点标记的动画效果，此处为弹跳效果
+                marker.setAnimation('AMAP_ANIMATION_BOUNCE');
+
+                //实时路况图层
+                var trafficLayer = new AMap.TileLayer.Traffic({
+                    zIndex: 10
+                });
+                trafficLayer.setMap(map);
+
+                AMap.service('AMap.Weather', function() {
+                    var weather = new AMap.Weather();
+                    //查询实时天气信息, 查询的城市到行政级别的城市，如朝阳区、杭州市
+                    weather.getLive('南京', function(err, data) {
+                        if (!err) {
+                            var str = [];
+                            str.push('<div style="color: #3366FF;">实时天气' + '</div>');
+                            str.push('<div>城市/区：' + data.city + '</div>');
+                            str.push('<div>天气：' + data.weather + '</div>');
+                            str.push('<div>温度：' + data.temperature + '℃</div>');
+                            str.push('<div>风向：' + data.windDirection + '</div>');
+                            str.push('<div>风力：' + data.windPower + ' 级</div>');
+                            str.push('<div>空气湿度：' + data.humidity + '</div>');
+                            str.push('<div>发布时间：' + data.reportTime + '</div>');
+                            console.log(str);
+                        }
+                    });
+                });
+			}
 		</script>
 </html>

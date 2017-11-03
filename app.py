@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import jsonify
-# import my_can_bus
+import my_can_bus
 import threading
 
 app = Flask(__name__)
@@ -19,11 +19,22 @@ def index_phone():
 
 @app.route('/query_vehicle_data')
 def query_vehicle_data():
+    return jsonify({'ok': True, 'ac_temp': my_can_bus.ac_temp, 'gear_d_pos': my_can_bus.gear_d_pos})
+
+
+@app.route('/ac_temp_add')
+def ac_temp_add():
+    my_can_bus.ac_temp_add()
+    return jsonify({'ok': True})
+
+
+@app.route('/ac_temp_minus')
+def ac_temp_minus():
+    my_can_bus.ac_temp_minus()
     return jsonify({'ok': True})
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    # receive_can_message_thread = threading.Thread(target=my_can_bus.receive_can_message)
-    # receive_can_message_thread.start()
+    receive_can_message_thread = threading.Thread(target=my_can_bus.receive_can_message)
+    receive_can_message_thread.start()
     app.run(host='0.0.0.0', port=8888, debug=True)
