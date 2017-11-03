@@ -155,7 +155,7 @@
                     </div>
                 </h1>
 			</header>
-            <!--<img style="-webkit-user-select: none;position: absolute;top: 44px;right: 0;z-index: 100;" src="http://192.168.1.101:8081/">-->
+            <img id="reverse_camera" style="user-select: none;position: absolute;top: 22px;right: 0px;z-index: 100;width: 240px;display: none;" src="http://192.168.1.101:8081/">
 			<div class="mui-content" id="container">
 				<!--<a href="#modal" class="mui-btn mui-btn-primary mui-btn-block">Click</a>-->
 			</div>
@@ -165,13 +165,13 @@
                     <div class="mui-col-sm-6 mui-col-xs-6" style="text-align: center;">
                         <div class="title">TEMPRATURE</div>
                         <div class="mui-row">
-                            <div class="mui-col-sm-4 mui-col-xs-4">
+                            <div class="mui-col-sm-4 mui-col-xs-4" onclick="ac_temp_minus();">
                                 <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthindown"></span></div>
                             </div>
                             <div class="mui-col-sm-4 mui-col-xs-4">
-                                <span class="number">27<span class="unit">℃</span></span>
+                                <span class="number"><span id="temp-num">27</span><span class="unit">℃</span></span>
                             </div>
-                            <div class="mui-col-sm-4 mui-col-xs-4">
+                            <div class="mui-col-sm-4 mui-col-xs-4" onclick="ac_temp_add();">
                                 <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthinup"></span></div>
                             </div>
                         </div>
@@ -250,7 +250,8 @@
 
 			$(document).ready(function(){
                 initAutoMap();
-                query_vehicle_data();
+
+                setInterval(query_vehicle_data,1000);
             });
 
             function query_vehicle_data() {
@@ -263,7 +264,40 @@
                     },
                     success: function(data) {
                         console.log(data);
+                        $('#temp-num').html(data.ac_temp);
+                        if(data.gear_d_pos == 1) {
+                            $('#reverse_camera').show();
+                        } else {
+                            $('#reverse_camera').hide();
+                        }
+                    }
+                });
+            }
 
+            function ac_temp_add() {
+                $.ajax({
+                    url: "ac_temp_add",
+                    type : "GET",
+                    dataType: "json",
+                    contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+                    data: {
+                    },
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
+            }
+
+            function ac_temp_minus() {
+                $.ajax({
+                    url: "ac_temp_minus",
+                    type : "GET",
+                    dataType: "json",
+                    contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+                    data: {
+                    },
+                    success: function(data) {
+                        console.log(data);
                     }
                 });
             }
