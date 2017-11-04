@@ -19,7 +19,14 @@ def index_phone():
 
 @app.route('/query_vehicle_data')
 def query_vehicle_data():
-    return jsonify({'ok': True, 'ac_temp': my_can_bus.ac_temp, 'gear_d_pos': my_can_bus.gear_d_pos})
+    return jsonify({'ok': True,
+                    'ac_temp': my_can_bus.ac_temp,
+                    'gear_d_pos': my_can_bus.gear_d_pos,
+                    'tire_lf': my_can_bus.tire_lf,
+                    'tire_rf': my_can_bus.tire_rf,
+                    'tire_rr': my_can_bus.tire_rr,
+                    'tire_lr': my_can_bus.tire_lr
+    })
 
 
 @app.route('/ac_temp_add')

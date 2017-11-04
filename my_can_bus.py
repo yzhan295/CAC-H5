@@ -17,10 +17,18 @@ def receive_can_message():
 
 def ac_front_power_on_off():
     bus = can.interface.Bus(bustype='socketcan_native', channel='can0')
+    msg_362_normal = can.Message(arbitration_id=0x362,
+                                 data=[0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
+                                 extended_id=False)
     msg_362 = can.Message(arbitration_id=0x362,
                           data=[0x00, 0x5C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
                           extended_id=False)
+    bus.send(msg_362_normal)
+    time.sleep(1)
     bus.send(msg_362)
+    time.sleep(1)
+    bus.send(msg_362_normal)
+    time.sleep(1)
 
 
 def ac_temp_add():

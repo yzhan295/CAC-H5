@@ -155,7 +155,7 @@
                     </div>
                 </h1>
 			</header>
-            <img id="reverse_camera" style="user-select: none;position: absolute;top: 22px;right: 0px;z-index: 100;width: 240px;display: none;" src="http://192.168.1.101:8081/">
+            <img id="reverse_camera" style="user-select: none;position: absolute;top: 22px;right: 0px;z-index: 100;width: 240px;display: none;" src="http://192.168.188.133:8081/">
 			<div class="mui-content" id="container">
 				<!--<a href="#modal" class="mui-btn mui-btn-primary mui-btn-block">Click</a>-->
 			</div>
@@ -169,7 +169,7 @@
                                 <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthindown"></span></div>
                             </div>
                             <div class="mui-col-sm-4 mui-col-xs-4">
-                                <span class="number"><span id="temp-num">27</span><span id="temp-unit" class="unit">℃</span></span>
+                                <span class="number"><span id="temp-num">0</span><span id="temp-unit" class="unit">℃</span></span>
                             </div>
                             <div class="mui-col-sm-4 mui-col-xs-4" onclick="ac_temp_add();">
                                 <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthinup"></span></div>
@@ -193,8 +193,8 @@
                             <div class="mui-col-sm-6 mui-col-xs-6 tire-item" style="margin-bottom: 10px;">
                                 <div class="tire-item-box">
                                     <div class="second-content">
-                                        <div class="number">39</div>
-                                        <div class="unit">PSI</div>
+                                        <div class="number" id="tire_lf">0</div>
+                                        <div class="unit">KPA</div>
                                     </div>
                                     <div class="desc">FRONT LEFT</div>
                                 </div>
@@ -202,8 +202,8 @@
                             <div class="mui-col-sm-6 mui-col-xs-6 tire-item"  style="margin-bottom: 10px;">
                                 <div class="tire-item-box">
                                     <div class="second-content">
-                                        <div class="number error">21</div>
-                                        <div class="unit">PSI</div>
+                                        <div class="number error" id="tire_rf">0</div>
+                                        <div class="unit">KPA</div>
                                     </div>
                                     <div class="desc">FRONT RIGHT</div>
                                 </div>
@@ -211,8 +211,8 @@
                             <div class="mui-col-sm-6 mui-col-xs-6 tire-item">
                                 <div class="tire-item-box">
                                     <div class="second-content">
-                                        <div class="number">39</div>
-                                        <div class="unit">PSI</div>
+                                        <div class="number" id="tire_lr">0</div>
+                                        <div class="unit">KPA</div>
                                     </div>
                                     <div class="desc">BACK LEFT&nbsp</div>
                                 </div>
@@ -220,8 +220,8 @@
                             <div class="mui-col-sm-6 mui-col-xs-6 tire-item">
                                 <div class="tire-item-box">
                                     <div class="second-content">
-                                        <div class="number">38</div>
-                                        <div class="unit">PSI</div>
+                                        <div class="number" id="tire_rr">0</div>
+                                        <div class="unit">KPA</div>
                                     </div>
                                     <div class="desc">BACK RIGHT&nbsp</div>
                                 </div>
@@ -264,17 +264,40 @@
                     },
                     success: function(data) {
                         console.log(data);
-                        if (data.ac_temp == 'Close') {
+                        if (data.ac_temp == 'Close' || data.ac_temp == 0) {
                             $('#temp-unit').hide();
+                            $('#temp-num').html("CLOSED");
                         } else {
                             $('#temp-unit').show();
+                            $('#temp-num').html(data.ac_temp);
                         }
-                        $('#temp-num').html(data.ac_temp);
+
                         if(data.gear_d_pos == 1) {
                             $('#reverse_camera').show();
                         } else {
                             $('#reverse_camera').hide();
                         }
+                        $('.tire-item-box .number').removeClass('error');
+                        if (data.tire_lf < 200) {
+                            $('#tire_lf').addClass('error');
+                        }
+
+                        if (data.tire_lr < 200) {
+                            $('#tire_lr').addClass('error');
+                        }
+
+                        if (data.tire_rf < 200) {
+                            $('#tire_rf').addClass('error');
+                        }
+
+                        if (data.tire_rr < 200) {
+                            $('#tire_rr').addClass('error');
+                        }
+
+                        $('#tire_lf').html(data.tire_lf);
+                        $('#tire_rf').html(data.tire_rf);
+                        $('#tire_lr').html(data.tire_lr);
+                        $('#tire_rr').html(data.tire_rr);
                     }
                 });
             }
