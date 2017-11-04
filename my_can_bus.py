@@ -98,14 +98,17 @@ class MyListener(Listener):
 
                 global ac_temp
                 ac_temp_digit3 = (msg.data[0] & 0x0C) >> 2
+                print('msg.data[4]='+ str(msg.data[4]))
                 ac_temp_digit1 = chr(msg.data[4])
                 ac_temp_digit2 = chr(msg.data[5])
 
-                if ac_temp_digit3 == 2:
-                    ac_temp = ac_temp_digit1 + ac_temp_digit2 + '.5'
+                if ac_temp_digit1 != ' ':
+                    if ac_temp_digit3 == 2:
+                        ac_temp = ac_temp_digit1 + ac_temp_digit2 + '.5'
+                    else:
+                        ac_temp = ac_temp_digit1 + ac_temp_digit2 + '.0'
                 else:
-                    ac_temp = ac_temp_digit1 + ac_temp_digit2 + '.0'
-
+                    ac_temp = 'Close'
                 print("ac_temp_digit1=" + ac_temp_digit1)
                 print("ac_temp_digit2=" + ac_temp_digit2)
                 print("ac_temp_digit3=" + str(ac_temp_digit3))

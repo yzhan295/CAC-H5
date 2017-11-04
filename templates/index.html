@@ -162,22 +162,22 @@
 
             <div class="dash">
                 <div class="mui-row">
-                    <div class="mui-col-sm-6 mui-col-xs-6" style="text-align: center;">
+                    <div class="mui-col-sm-6 mui-col-xs-6" style="text-align: center;" class="temp">
                         <div class="title">TEMPRATURE</div>
                         <div class="mui-row">
                             <div class="mui-col-sm-4 mui-col-xs-4" onclick="ac_temp_minus();">
                                 <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthindown"></span></div>
                             </div>
                             <div class="mui-col-sm-4 mui-col-xs-4">
-                                <span class="number"><span id="temp-num">27</span><span class="unit">℃</span></span>
+                                <span class="number"><span id="temp-num">27</span><span id="temp-unit" class="unit">℃</span></span>
                             </div>
                             <div class="mui-col-sm-4 mui-col-xs-4" onclick="ac_temp_add();">
                                 <div class="radius-btn-icon"><span class="mui-icon mui-icon-arrowthinup"></span></div>
                             </div>
                         </div>
                         <div class="mui-row" style="margin: 10px 0 0 0;">
-                            <div class="mui-col-sm-4 mui-col-xs-4">
-                                <img src="static/images/freezer.png">
+                            <div class="mui-col-sm-4 mui-col-xs-4" onclick="ac_front_power_on_off(this);">
+                                <img id="ac_front_power_on_off_img" src="static/images/air-conditioner.png">
                             </div>
                             <div class="mui-col-sm-4 mui-col-xs-4">
                                 <img src="static/images/car.png">
@@ -264,6 +264,11 @@
                     },
                     success: function(data) {
                         console.log(data);
+                        if (data.ac_temp == 'Close') {
+                            $('#temp-unit').hide();
+                        } else {
+                            $('#temp-unit').show();
+                        }
                         $('#temp-num').html(data.ac_temp);
                         if(data.gear_d_pos == 1) {
                             $('#reverse_camera').show();
@@ -291,6 +296,26 @@
             function ac_temp_minus() {
                 $.ajax({
                     url: "ac_temp_minus",
+                    type : "GET",
+                    dataType: "json",
+                    contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+                    data: {
+                    },
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
+            }
+
+            function ac_front_power_on_off() {
+                var cur_src = $('#ac_front_power_on_off_img').attr('src');
+                if(cur_src == 'static/images/air-conditioner.png') {
+                    $('#ac_front_power_on_off_img').attr('src', 'static/images/air-conditioner-2.png');
+                } else {
+                    $('#ac_front_power_on_off_img').attr('src', 'static/images/air-conditioner.png');
+                }
+                $.ajax({
+                    url: "ac_front_power_on_off",
                     type : "GET",
                     dataType: "json",
                     contentType : "application/x-www-form-urlencoded;charset=UTF-8",
