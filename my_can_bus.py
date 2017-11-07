@@ -66,6 +66,7 @@ def ac_temp_minus():
 
 
 def open_trunk():
+    print('open_trunk...')
     bus = can.interface.Bus(bustype='socketcan_native', channel='can0')
     msg_100 = can.Message(arbitration_id=0x100,
                           data=[0x0A, 0x0F, 0x00, 0x01, 0x02, 0x00, 0x33, 0xE3],
@@ -73,14 +74,12 @@ def open_trunk():
     bus.send(msg_100)
     time.sleep(0.2)
     bus.send(msg_100)
-    time.sleep(0.2)
 
 
 if __name__ == "__main__":
     # ac_front_power_on_off()
-    receive_can_message()
-    while True:
-        print('.')
+    #receive_can_message()
+    open_trunk()
 
 ac_temp = 0
 gear_d_pos = 0
@@ -88,6 +87,7 @@ tire_lf = 0
 tire_rf = 0
 tire_rr = 0
 tire_lr = 0
+trunk_status = 0
 
 class MyListener(Listener):
     """
@@ -117,7 +117,7 @@ class MyListener(Listener):
 
                 global ac_temp
                 ac_temp_digit3 = (msg.data[0] & 0x0C) >> 2
-                print('msg.data[4]='+ str(msg.data[4]))
+                # print('msg.data[4]='+ str(msg.data[4]))
                 ac_temp_digit1 = chr(msg.data[4])
                 ac_temp_digit2 = chr(msg.data[5])
 
@@ -128,14 +128,14 @@ class MyListener(Listener):
                         ac_temp = ac_temp_digit1 + ac_temp_digit2 + '.0'
                 else:
                     ac_temp = 'Close'
-                print("ac_temp_digit1=" + ac_temp_digit1)
-                print("ac_temp_digit2=" + ac_temp_digit2)
-                print("ac_temp_digit3=" + str(ac_temp_digit3))
+                # print("ac_temp_digit1=" + ac_temp_digit1)
+                # print("ac_temp_digit2=" + ac_temp_digit2)
+                # print("ac_temp_digit3=" + str(ac_temp_digit3))
 
             elif 0x109 == msg.arbitration_id:
                 global gear_d_pos
                 gear_d_pos = (msg.data[2] & 0xF0) >> 4
-                print("gear_d_pos=" + str(gear_d_pos))
+                # print("gear_d_pos=" + str(gear_d_pos))
 
             elif 0x3B5 == msg.arbitration_id:
                 tire_lf_0 = msg.data[0]
@@ -157,11 +157,16 @@ class MyListener(Listener):
                 tire_lr_1 = msg.data[7]
                 global tire_lr
                 tire_lr = tire_lr_0 * 16 + tire_lr_1
+                #
+                # print("tire_lf=" + str(tire_lf))
+                # print("tire_rf=" + str(tire_rf))
+                # print("tire_rr=" + str(tire_rr))
+                # print("tire_lr=" + str(tire_lr))
+            elif 0x435 == msg.arbitration_id:
+                global trunk_status
+                trunk_status = (msg.data[6] & 0x40) >> 6
 
-                print("tire_lf=" + str(tire_lf))
-                print("tire_rf=" + str(tire_rf))
-                print("tire_rr=" + str(tire_rr))
-                print("tire_lr=" + str(tire_lr))
+                print("trunk_status="+str(trunk_status))
 
     def stop(self):
         if self.output_file:
