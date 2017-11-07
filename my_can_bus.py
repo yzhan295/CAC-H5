@@ -65,6 +65,17 @@ def ac_temp_minus():
     time.sleep(1)
 
 
+def open_trunk():
+    bus = can.interface.Bus(bustype='socketcan_native', channel='can0')
+    msg_100 = can.Message(arbitration_id=0x100,
+                          data=[0x0A, 0x0F, 0x00, 0x01, 0x02, 0x00, 0x33, 0xE3],
+                          extended_id=False)
+    bus.send(msg_100)
+    time.sleep(0.2)
+    bus.send(msg_100)
+    time.sleep(0.2)
+
+
 if __name__ == "__main__":
     # ac_front_power_on_off()
     receive_can_message()

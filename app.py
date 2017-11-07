@@ -47,6 +47,12 @@ def ac_front_power_on_off():
     return jsonify({'ok': True})
 
 
+@app.route('/open_trunk')
+def open_trunk():
+    my_can_bus.open_trunk()
+    return jsonify({'ok': True})
+
+
 if __name__ == '__main__':
     receive_can_message_thread = threading.Thread(target=my_can_bus.receive_can_message)
     receive_can_message_thread.start()
